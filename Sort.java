@@ -5,7 +5,7 @@ public class Sort {
 	public static void main(String[] args) {
 		Random rand = new Random();
 		
-		final int ARRAY_SIZE = 100;
+		final int ARRAY_SIZE = 10;
 		
 		int[] randomArray = new int[ARRAY_SIZE];
 		
@@ -60,11 +60,16 @@ public class Sort {
 			     // Swap numbers[j] and numbers[j - 1]
 			     int temp = unsortedArray[j];
 			     unsortedArray[j] = unsortedArray[j - 1];
+			     sortedArray[j] = unsortedArray[j - 1];
+			     
 			     unsortedArray[j - 1] = temp;
+			     sortedArray[j - 1] = temp;
+			    		 
 			     --j;
 			  }
 			  
-			}
+			  
+		}
 		
 		return sortedArray;
 	}
